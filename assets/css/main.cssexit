@@ -252,9 +252,9 @@ body {
     content: "";
     position: relative;
     top: 30%;
-    left: 1%;
+    left: 0;
     transform: translateY(-50%);
-    width: 0.8%;
+    width: 1%;
     height: 70%;
     max-height: 70%;
     background-color: #555;
@@ -349,13 +349,13 @@ body {
     color: #fff; }
     .header--logo p {
       margin: 0 0 0 10px;
-      font-size: 0.9vw;
+      font-size: 16px;
       font-weight: 700;
       text-transform: uppercase; }
   .header--nav-toggle {
     display: flex;
-    width: 4%;
-    height: 4%;
+    width: 50px;
+    height: 50px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -363,20 +363,45 @@ body {
     .header--nav-toggle span, .header--nav-toggle::before, .header--nav-toggle::after {
       content: "";
       position: relative;
-      width: 0.7vw;
-      height: 0.1vw;
+      width: 16px;
+      height: 2px;
       background-color: #fff; }
     .header--nav-toggle::before {
-      bottom: 300%;
-      width: 1.2vw; }
+      bottom: 5px;
+      width: 23px; }
     .header--nav-toggle::after {
-      top: 300%;
-      width: 1.2vw; }
+      top: 5px;
+      width: 23px; }
+  .header--cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #f0d801bf;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0s 0.4s; }
+    .header--cta:focus {
+      outline: none; }
+    .header--cta.is-active {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.4s ease-in-out 0.4s; }
+    @media (max-width: 767px) {
+      .header--cta {
+        display: none; } }
 
 .side-nav {
   position: relative;
   display: flex;
-  width: 400px;
+  width: 50%;
   height: 70%;
   max-height: 75%;
   flex-direction: column;
@@ -389,7 +414,7 @@ body {
     position: relative;
     top: -10%;
     color: #fff;
-    font-size: 0.5vw;
+    font-size: 0.9vw;
     cursor: pointer; }
     .side-nav > li span {
       position: relative;
@@ -403,7 +428,7 @@ body {
     .side-nav > li::before {
       position: relative;
       top: 3%;
-      left: 1%;
+      left: 7%;
       color: #555;
       font-size: 0.8vw;
       font-weight: 300; }
@@ -425,7 +450,7 @@ body {
       visibility: visible;
       transition: opacity 0.4s ease-in-out; }
     .side-nav li.is-active::before {
-      left: -10%;
+      left: -30%;
       color: #fff; }
 
 .intro {
@@ -497,18 +522,18 @@ body {
 .work {
   position: relative;
   display: flex;
-  width: 80%;
+  width: 960px;
   max-width: 80%;
   height: 100%;
   flex-direction: column;
   justify-content: center;
-  margin: -7% auto; }
+  margin: 0% auto; }
   @media (max-width: 1180px) {
     .work {
       max-width: 100%; } }
   .work h2 {
-    margin: 0 0 5% 0;
-    font-size: 2vw;
+    margin: 0 0 20px 0;
+    font-size: 30px;
     text-align: center; }
   .work--lockup {
     position: relative; }
@@ -590,6 +615,33 @@ body {
     .work--lockup .slider--prev {
       left: 0; }
 
+@media (max-width: 900px) {
+  .work--lockup .slider--item-image {
+    width: 120px;
+    height: 120px; }
+  .work--lockup .slider--item-center .slider--item-image {
+    width: 240px;
+    height: 240px; }
+  .work--lockup .slider--next,
+  .work--lockup .slider--prev {
+    top: 130px; } }
+@media (max-width: 767px) {
+  .work--lockup .slider {
+    width: 75%; }
+    .work--lockup .slider--item-image {
+      width: 90px;
+      height: 90px; }
+    .work--lockup .slider--item-center .slider--item-image {
+      width: 190px;
+      height: 190px; }
+  .work--lockup .slider--next,
+  .work--lockup .slider--prev {
+    top: 105px; } }
+@media (max-width: 600px) {
+  .work--lockup .slider {
+    width: auto; }
+    .work--lockup .slider--item-left, .work--lockup .slider--item-right {
+      display: none; } }
 body {
   margin: 0;
   padding: 0;
@@ -613,7 +665,7 @@ body {
       max-width: 100%; } }
   .about--banner {
     position: relative;
-    height: 90%; }
+    height: 75%; }
     .about--banner h2 {
       position: relative;
       margin-top: 3%;
@@ -622,7 +674,7 @@ body {
       line-height: 1;
       z-index: 1; }
     .about--banner a {
-      padding: 1% 5% 1% 0;
+      padding: 5px 17px 5px 0;
       text-decoration: none;
       color: #fff;
       font-weight: 700;
@@ -661,7 +713,7 @@ body {
         bottom: -80px; }
     .about--options h3 {
       position: relative;
-      bottom: -10%;
+      bottom: -20%;
       left: 1%;
       font-size: 0.9vw;
       text-transform: uppercase;
@@ -680,7 +732,7 @@ body {
   .contact--lockup {
     position: relative;
     display: flex;
-    width: 45%;
+    width: 900px;
     max-width: 75%;
     height: 100%;
     align-items: center;
@@ -689,19 +741,22 @@ body {
     @media (max-width: 1180px) {
       .contact--lockup {
         max-width: 90%; } }
+    @media (max-width: 767px) {
+      .contact--lockup {
+        justify-content: center; } }
     .contact--lockup .modal {
-      padding: 5% 5%;
+      padding: 45px 45px;
       text-align: center;
       background-color: #0c0c0c;
       box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.75); }
       .contact--lockup .modal--information p,
       .contact--lockup .modal--information a {
         display: block;
-        margin: 7% 0;
+        margin: 14px 0;
         text-decoration: none;
         color: #fff;
         font-weight: 700;
-        font-size: 1.2vw; }
+        font-size: 25px; }
       .contact--lockup .modal--information p {
         margin-top: 0; }
       .contact--lockup .modal--options {
@@ -722,7 +777,7 @@ body {
         .contact--lockup .modal--options a {
           display: block;
           width: 100%;
-          padding: 2% 0;
+          padding: 8px 0;
           text-decoration: none;
           color: #fff;
           font-weight: 700; }
@@ -735,7 +790,7 @@ body {
   height: 100%;
   flex-direction: column;
   justify-content: center;
-  margin: -5% 20%; }
+  margin: 1% 20%; }
   @media (max-width: 1180px) {
     .hire {
       max-width: 100%; } }
@@ -891,4 +946,4 @@ body {
   .outer-nav li.is-vis:nth-child(5) {
     transition-delay: 0.16s; }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.cssexit.map */
