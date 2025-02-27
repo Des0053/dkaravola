@@ -349,7 +349,7 @@ body {
     color: #fff; }
     .header--logo p {
       margin: 0 0 0 10px;
-      font-size: 0.9vw;
+      font-size: min(2vmax, 17px);
       font-weight: 700;
       text-transform: uppercase; }
   .header--nav-toggle {
@@ -662,10 +662,10 @@ body {
       .about--options > a:hover h3 {
         bottom: -80px; }
       .about--banner h3 {
-        font-size: min(1.5vmax, 17.4px);}
+        font-size: min(1.3vmax, 17.4px);}
     .about--options h3 {
       position: relative;
-      bottom: -10%;
+      bottom: 10%;
       left: 1%;
       font-size: 0.9vw;
       text-transform: uppercase;
@@ -707,6 +707,7 @@ body {
       .contact--lockup .modal--options {
         margin: 0;
         padding: 0;
+        font-size: min(1.2vmax, 14.5px);
         list-style: none; }
         .contact--lockup .modal--options > li {
           width: 130px;
@@ -893,3 +894,4 @@ body {
     transition-delay: 0.16s; }
 
 /*# sourceMappingURL=main.css.map */
+
